@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/manifest.ts","./src/vite-env.d.ts","./src/components/promptform.tsx","./src/components/promptoutput.tsx","./src/components/tooltip.tsx","./src/hooks/usellm.ts","./src/lib/llmclient.ts","./src/lib/storage.ts","./src/types/llm.ts","./background/index.ts","./content/index.ts","./vite.config.ts"],"errors":true,"version":"5.8.3"}

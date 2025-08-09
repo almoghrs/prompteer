@@ -1,0 +1,37 @@
+/* Minimal global resets and utilities for Prompteer */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Ensure smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Prevent text selection issues */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus visible for better accessibility */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* 
+  Note: Apply font-sans class to root container to use Inter Tight font everywhere.
+  The font-sans utility class maps to the Inter Tight font family defined in tailwind.config.cjs
+*/

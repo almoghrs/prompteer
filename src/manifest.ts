@@ -1,0 +1,39 @@
+const manifest = {
+  name: 'Prompteer',
+  description: 'Upgrades plain prompts into structured, role-aware, chain-of-thought prompts',
+  version: '0.1.0',
+  manifest_version: 3,
+  action: {
+    default_title: 'Prompteer',
+    default_popup: 'popup.html'
+  },
+  background: {
+    service_worker: 'background/index.ts',
+    type: 'module'
+  },
+  content_scripts: [
+    {
+      matches: ['https://*/*', 'http://*/*'],
+      js: ['content/index.ts']
+    }
+  ],
+  icons: {
+    '128': 'public/icon.png'
+  },
+  permissions: ['storage'],
+  host_permissions: [
+    'https://api.openai.com/*',
+    'https://api.anthropic.com/*'
+  ],
+  web_accessible_resources: [
+    {
+      resources: ['assets/*', 'popup.js'],
+      matches: ['*://*/*']
+    }
+  ],
+  content_security_policy: {
+    extension_pages: "script-src 'self'; object-src 'self';"
+  }
+};
+
+export default manifest;
